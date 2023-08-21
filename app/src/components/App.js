@@ -1,6 +1,9 @@
 import user from './Profile/user.json';
 import { Profile } from './Profile/Profile';
 
+import data from './Statistics/data.json';
+import { Statistics } from './Statistics/Statistics';
+
 const rootStyles = {
   display: 'flex',
   flexDirection: 'column',
@@ -23,6 +26,7 @@ export const App = () => {
         views={user.stats.views}
         likes={user.stats.likes}
       />
+      <Statistics title="Upload stats" stats={data} />
     </div>
   );
 };
